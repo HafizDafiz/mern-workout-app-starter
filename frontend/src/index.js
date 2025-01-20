@@ -11,4 +11,4 @@ root.render(
       <App />
     </WorkoutsContextProvider>
   </React.StrictMode>
-)
+);

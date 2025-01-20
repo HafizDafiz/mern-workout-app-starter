@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
+import { useWorkoutsContext } from "../hooks/useWorkoutContext";
 
 const WorkoutForm = () => {
     const {dispatch} = useWorkoutsContext();
@@ -12,7 +12,7 @@ const WorkoutForm = () => {
         e.preventDefault();
         const workout = { title, load, reps };
 
-        const res = await fetch(`${process.env.REACT_APP_API_URL}/api/workouts`, {
+        const res = await fetch('/api/workouts', {
             method: 'POST',
             body: JSON.stringify(workout),
             headers: { 'Content-Type': 'application/json' }
