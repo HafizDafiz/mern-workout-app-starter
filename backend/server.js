@@ -29,6 +29,11 @@ app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();
 });
+const cors = require("cors");
+
+const app = express();
+
+app.use(cors());
 
 // Routes
 // workoutRoutes is triggered when we make a request to /api/workouts
