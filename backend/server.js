@@ -13,8 +13,11 @@ const mongoose = require("mongoose");
 // Require routes
 const workoutRoutes = require("./routes/workouts");
 
+const cors = require("cors");
 // Set up the express app
+const app = express();
 
+app.use(cors());
 
 // Middleware:
 // any code that executes between us getting a request on the server
@@ -29,11 +32,7 @@ app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();
 });
-const cors = require("cors");
 
-const app = express();
-
-app.use(cors());
 
 // Routes
 // workoutRoutes is triggered when we make a request to /api/workouts
