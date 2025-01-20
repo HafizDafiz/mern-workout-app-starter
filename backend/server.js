@@ -14,7 +14,7 @@ const mongoose = require("mongoose");
 const workoutRoutes = require("./routes/workouts");
 
 // Set up the express app
-const app = express();
+
 
 // Middleware:
 // any code that executes between us getting a request on the server
